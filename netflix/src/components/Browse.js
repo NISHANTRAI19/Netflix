@@ -1,8 +1,12 @@
 import React from 'react'
+import Header from './Header'
 
 const Browse = () => {
   return (
-    <div>Brosdfdswse</div>
+    
+    <div>
+      <Header/>
+      Brosdfdswse</div>
   )
 }
 
