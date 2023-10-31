@@ -1,21 +1,26 @@
 import React, { useEffect } from 'react'
 import Header from './Header'
 import { options } from '../utils/constants';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addNowPlayingMovies } from '../utils/movieSlice';
 import useNowPlayingMovies from '../hooks/useNowPlayingMovies';
 import MainContainer from './MainContainer';
 import SecondaryContainer from './SecondaryContainer';
+import usePopularMovies from '../hooks/usePopularMovies';
 
 const Browse = () => {
  
-  useNowPlayingMovies();
+  
+ useNowPlayingMovies();
+ usePopularMovies();
+
+
   return (
     
-    <div>
+    <div className='bg-black'>
       <Header/>
       <MainContainer/>
-      <SecondaryContainer/>
+     <SecondaryContainer/>
       </div>
   )
 }
